@@ -5,22 +5,15 @@
 
 class Weapon
 {
-
 private:
-
-    std::string type
+    std::string type;
 
 public:
-
-    Weapon();
-    Weapon(std::string type);
+    Weapon(const std::string& type); //objet const peut appeler uniquement les fonctions const
     ~Weapon();
 
-    const   std::string  &getType();
-    void    setType(std::string type);
-
+    const std::string& getType(); //renvoie une referrence constante (dans le sujet)
+    void setType(const std::string& newType); //prend une reference constante
 };
 
 #endif
-
-

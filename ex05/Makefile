@@ -1,8 +1,8 @@
-NAME = sed_is_for_losers
-SRC = main.cpp
-OBJ = $(SRC:.cpp=.o)
+NAME = harl
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRC = main.cpp Harl.cpp
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 

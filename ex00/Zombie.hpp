@@ -8,14 +8,14 @@ class Zombie
 
 private:
 
-    std::string name;
+    std::string name; 
 
 public:
 
     Zombie(std::string name);
     ~ Zombie();
 
-    void announce(void) const;
+    void announce(void) const; // ne modifie rien. ne ; ne modifie pas les attributs de la classe
 
 
 };

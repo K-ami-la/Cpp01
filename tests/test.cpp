@@ -9,31 +9,36 @@ private:
 
 public:
 
-    void type(std::string type);
-    ~type(std::string type);
+    Test(std::string type);
+    ~Test();
+
+    const std::string getter() const {};
+    void setter(std::string &newType){};
+};
 
 
-    void getter(std::string type){};
-    void setter(std::string type){};
-}
+Test :: std::string getter();
 
+Test::~Test(){};
 
-void Test::getter(std::string type)
+std::string Test::getter()
 {
+
     return type;
 } 
 
-Test::setter(std::string type)
+void Test::setter(std::string &newType)
 {
-    type = type;
+    type = newType;
 }
 
 int main()
 {
     Test t("Bonjour");
 
-    t.getter();
-    t.setter();
+    std::cout << t.getter() << std::endl;
+    t.setter("Salut");
+    std::cout << t.getter() << std::endl;
 
 
 }
